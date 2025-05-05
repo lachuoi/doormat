@@ -36,7 +36,10 @@ jobs:
         uses: baptiste0928/cargo-install@v3
         with:
           crate: cargo-component
-
+ 
+      - name: Install Just
+        run: cargo install just
+      
       - name: Just
         run: |
           just
