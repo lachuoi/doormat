@@ -37,9 +37,9 @@ jobs:
         with:
           crate: cargo-component
 
-      - name: Make
+      - name: Just
         run: |
-          make
-          make spin-test
+          just
+          just spin-test
         env:
           RUST_LOG: spin=trace
