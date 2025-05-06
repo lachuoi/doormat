@@ -17,10 +17,6 @@ lint:
 test-unit:
     RUST_LOG=${RUST_LOG} cargo test --target=`rustc -vV | sed -n 's|host: ||p'`
 
-# Run Spin tests
-spin-test:
-    RUST_LOG=${RUST_LOG} spin test
-
 up:
     #!/usr/bin/env fish
     for line in (cat ../../.env | grep -v '^#' | grep -v '^[[:space:]]*$')
