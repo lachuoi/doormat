@@ -36,7 +36,10 @@ jobs:
         uses: baptiste0928/cargo-install@v3
         with:
           crate: cargo-component
- 
+
+      - name: Spin test plugin
+        run: spin plugin install -u https://github.com/fermyon/spin-test/releases/download/canary/spin-test.json 
+
       - name: Install Just
         run: cargo install just
       
