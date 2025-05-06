@@ -26,8 +26,8 @@ jobs:
       - name: Install Wasm Rust target
         run: rustup target add wasm32-wasip1
 
-      - name: Make
-        run: make
+      - name: Just
+        run: just
         env:
           RUST_LOG: spin=trace
 
