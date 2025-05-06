@@ -17,6 +17,13 @@ lint:
 test-unit:
     RUST_LOG=${RUST_LOG} cargo test --target=`rustc -vV | sed -n 's|host: ||p'`
 
+release:
+    #!/usr/bin/env fish
+    set this_version (grep '^version =' spin.toml | sed -E 's/version = "(.*)"/\1/')
+    git tag v$this_version
+    git push origin v$this_version
+    set -e this_version
+
 up:
     #!/usr/bin/env fish
     for line in (cat ../../.env | grep -v '^#' | grep -v '^[[:space:]]*$')

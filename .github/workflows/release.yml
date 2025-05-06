@@ -46,3 +46,6 @@ jobs:
           files: |
             target/wasm32-wasip1/release/doormat.wasm
             checksums-${{ env.RELEASE_VERSION }}.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
