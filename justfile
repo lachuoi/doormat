@@ -15,11 +15,11 @@ lint:
 
 # Run unit tests with dynamic target
 test-unit:
-    RUST_LOG=${LOG_LEVEL} cargo test --target=`rustc -vV | sed -n 's|host: ||p'`
+    RUST_LOG=${RUST_LOG} cargo test --target=`rustc -vV | sed -n 's|host: ||p'`
 
 # Run Spin tests
 spin-test:
-    RUST_LOG=${LOG_LEVEL} spin test
+    RUST_LOG=${RUST_LOG} spin test
 
 up:
     #!/usr/bin/env fish
