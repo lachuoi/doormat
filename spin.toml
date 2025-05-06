@@ -17,7 +17,7 @@ allowed_outbound_hosts = []
 [component.doormat.build]
 command = "cargo build --target wasm32-wasip1 --release"
 
-[component.doormat.spin-test]
+[component.doormat.tool.spin-test]
 source = "target/wasm32-wasip1/release/tests.wasm"
 build = "cargo component build --release"
 workdir = "tests"

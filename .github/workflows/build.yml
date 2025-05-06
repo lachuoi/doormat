@@ -24,7 +24,7 @@ jobs:
       - name: Install Wasm Rust target
         run: rustup target add wasm32-wasip1
 
-      - name: Install spin-test
+      - name: Install spin and spin-test
         run: |
           mkdir spin-install
           cd spin-install
@@ -36,9 +36,6 @@ jobs:
         uses: baptiste0928/cargo-install@v3
         with:
           crate: cargo-component
-
-      - name: Spin test plugin
-        run: spin plugin install -u https://github.com/fermyon/spin-test/releases/download/canary/spin-test.json 
 
       - name: Install Just
         run: cargo install just
