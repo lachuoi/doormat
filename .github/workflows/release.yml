@@ -26,6 +26,9 @@ jobs:
       - name: Install Wasm Rust target
         run: rustup target add wasm32-wasip1
 
+      - name: Install Just
+        run: cargo install just
+
       - name: Just
         run: just
         env:
